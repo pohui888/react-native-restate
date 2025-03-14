@@ -23,5 +23,6 @@ export default function RootLayout() {
 
   if (!fontsLoaded) return null;
 
-  return <Stack />;
+  //  headerShown -> to show/hide the header bar
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
