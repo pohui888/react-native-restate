@@ -30,6 +30,7 @@ export async function login() {
 
     if (!response) throw new Error('Failed to login');
 
+    // open web broser in mobile
     const browserResult = await openAuthSessionAsync(
       response.toString(),
       redirectUri // After login, the browser redirects back to redirectUri.
@@ -66,7 +67,7 @@ export async function logout() {
   }
 }
 
-export async function getUser() {
+export async function getCurrentUser() {
   try {
     const response = await account.get();
 
